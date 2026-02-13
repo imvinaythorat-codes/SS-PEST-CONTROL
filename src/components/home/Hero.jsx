@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { SITE_CONFIG } from '../../utils/constants';
 
 function Hero() {
   const heroRef = useRef(null);
+  const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
     // Pest scatter animation - your signature!
@@ -33,23 +34,29 @@ function Hero() {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Video Background */}
+      {/* Video/Image Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="https://cdn.coverr.co/videos/coverr-a-clean-and-modern-home-interior-9336/1080p.mp4" type="video/mp4" />
-          {/* Fallback image if video doesn't load */}
+        {!videoError ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            onError={() => setVideoError(true)}
+          >
+            {/* Multiple video sources for better compatibility */}
+            <source src="https://player.vimeo.com/external/434045526.hd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=174" type="video/mp4" />
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-house-interior-3713-large.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          /* Fallback high-quality image */
           <img 
             src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80&auto=format&fit=crop"
             alt="Modern home interior"
             className="w-full h-full object-cover"
           />
-        </video>
+        )}
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/60 to-primary-dark/50"></div>
       </div>
@@ -81,7 +88,7 @@ function Hero() {
         <h1 className="text-6xl md:text-8xl font-heading font-black text-white mb-8 leading-tight drop-shadow-2xl">
           Mumbai's Premier<br />
           <span className="relative inline-block">
-            <span className="bg-gradient-to-r from-accent-yellow via-accent-orange to-accent-yellow bg-clip-text text-transparent animate-pulse">
+            <span className="bg-gradient-to-r from-accent-yellow via-accent-orange to-accent-yellow bg-clip-text text-transparent">
               Pest Management
             </span>
           </span>

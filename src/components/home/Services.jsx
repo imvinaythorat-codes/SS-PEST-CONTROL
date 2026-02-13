@@ -2,13 +2,13 @@ import { SERVICES } from '../../utils/constants';
 
 // High-quality, accurate pest control images
 const SERVICE_IMAGES = {
-  'cockroaches-ants': 'https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=800&auto=format&fit=crop', // Kitchen cleaning
-  'bed-bugs': 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&auto=format&fit=crop', // Bedroom
-  'termite': 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&auto=format&fit=crop', // Wood/furniture
-  'rodent': 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&auto=format&fit=crop', // Mouse/rodent
-  'mosquitoes': 'https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?w=800&auto=format&fit=crop', // Mosquito
-  'wood-borers': 'https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&auto=format&fit=crop', // Wooden furniture
-  'bird-control': 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800&auto=format&fit=crop', // Birds
+  'cockroaches-ants': 'https://imgs.search.brave.com/yH-ZTUxjlWXmPWQTUTSViBttAagBcBqXtH0uy3uOCrI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDMv/NjA3LzM3Mi9zbWFs/bC9kZWFkLWNvY2ty/b2FjaC1vbi1mbG9v/ci1waG90by5qcGc', // Kitchen cleaning
+  'bed-bugs': 'https://imgs.search.brave.com/krMgiHUv6Qw8X6jGDT-NKi8U83txzMjj0VkDVQegE-w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzUx/YjViZmJlZTRiMDlm/MjBhYjdhODM2OS8x/Mzc2MDkwMjY5MjE1/LVAxNkxZQ0xRSTdN/TDNCTDlPSTlPL0xT/K2JiK2hpZGluZytp/bitydWJiZXIrbW9s/ZGluZy5qcGc', // Bedroom
+  'termite': 'https://imgs.search.brave.com/GEFffFmAwt72BOJ5rxwe-9jUYV3AZ28_T-BWj9POgDc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50Z3JpZC5ob21l/ZGVwb3Qtc3RhdGlj/LmNvbS9oZHVzL2Vu/X1VTL0RUQ0NPTU5F/Vy9BcnRpY2xlcy9o/b3ctdG8tZ2V0LXJp/ZC1vZi10ZXJtaXRl/cy1zdGVwLTIuanBn', // Wood/furniture
+  'rodent': 'https://imgs.search.brave.com/in-9niMMZrzh6sw75oHuAhZsNIQMUXYEwPHJUy1tAUE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9yYXQtd2FzLWNh/Z2UtY2F0Y2hpbmct/cmF0LXJhdC1oYXMt/Y29udGFnaW9uLWRp/c2Vhc2UtaHVtYW5z/LXN1Y2gtYXMtcGxh/Z3VlXzQxNjg5LTY4/LmpwZz9zZW10PWFp/c19oeWJyaWQmdz03/NDAmcT04MA', // Mouse/rodent
+  'mosquitoes': 'https://imgs.search.brave.com/PbCEMfv08mP7r5EyJH0lcWaZmZXyrG4Bo_uu8gAfALA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTAv/ODQ1LzQ3OC9zbWFs/bC9hLWxhcmdlLW51/bWJlci1vZi1kZWFk/LW1vc3F1aXRvZXMt/b24tYS13aGl0ZS1i/YWNrZ3JvdW5kLXBo/b3RvLmpwZw', // Mosquito
+  'wood-borers': 'https://imgs.search.brave.com/XH_6vvtn-YeUFGak54FcGDtCKUtcLYy8jPaN7DnesSU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDky/NTgwOTMwL3Bob3Rv/L2JvcmVycy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9aWNN/YnAzN1dmbUI0RlJu/SHREUTVOa3I0MDFP/YTk1OTBqZjl2aUdF/YTU4TT0', // Wooden furniture
+  'bird-control': 'https://imgs.search.brave.com/DIdfJtZ-6T2smfBWE08tQ5p7OdCtTAsyoTYsMpErN4k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ub21v/cmViaXJkcy5jb20u/YXUvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjEvMDMvRG91eW91/aGF2ZS5qcGc', // Birds
 };
 
 function Services() {
